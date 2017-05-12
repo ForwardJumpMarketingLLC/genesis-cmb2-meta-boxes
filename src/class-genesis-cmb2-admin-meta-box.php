@@ -159,6 +159,8 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 		);
 
 		foreach ( (array) $this->fields_config as $field_config ) {
+			$field_config['name'] = __( $field_config['name'], FJ_GENESISCMB2_TEXT_DOMAIN );
+
 			// Set our CMB2 fields.
 			$this->cmb2_instance->add_field( $field_config );
 		}
