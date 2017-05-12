@@ -2,6 +2,8 @@
 
 This plugin simplifies adding CMB2 meta boxes to the Genesis Theme Settings and Genesis CPT Archive Settings pages.
 
+![Genesis CPT Archive Settings screenshot](screenshot.jpg "Example CMB2 meta box added to Genesis CPT Archive Settings.")
+
 ## Requirements
 PHP 5.4+
 
@@ -37,6 +39,9 @@ genesiscmb2_add_cpt_archive_box( $cpt_config );
 ```
 
 - Retrieve the custom field values using `genesis_get_option( $field_id )` and `genesis_get_cpt_option( $field_id )`.
+
+## Limitations
+Group fields are not currently supported.
 
 ## Credits
 Major props to [Justin Sternberg](https://twitter.com/Jtsternberg) for the heavy lifting.  This plugin is simply a repackaging of the Justin's example code provided in the [CMB2 Snippet Library](https://github.com/CMB2/CMB2-Snippet-Library/tree/master/options-and-settings-pages).
