@@ -32,10 +32,9 @@ return [
 		],
 		'fields'  => [
 			[
-				'name'    => __( 'Example field', FJ_GENESISCMB2_TEXT_DOMAIN ),
+				'name'    => 'Example field',
 				'id'      => 'example_cmb2_field',
 				'type'    => 'text',
-				'default' => false,
 			],
 		],
 	],

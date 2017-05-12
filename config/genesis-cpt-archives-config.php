@@ -33,29 +33,9 @@ return [
 		],
 		'fields'  => [
 			[
-				'name'    => __( 'Example field', FJ_GENESISCMB2_TEXT_DOMAIN ),
+				'name'    => 'Example field',
 				'id'      => 'example_cmb2_field',
 				'type'    => 'text',
-				'default' => false,
-			],
-		],
-	],
-	[
-		'metabox' => [
-			'title'        => '22 Example Genesis CPT Settings CMB2 meta box', // String. Translation function is handled by the class.
-			'object_types' => [ 'new-post-type-2' ], // Array. CPT slug(s).
-			'priority'     => 'high', // 'high' or 'low'.
-			'show_names'   => true, // Bool.
-			'cmb2_styles'  => true, // Bool.
-			'closed'       => false, // Bool.
-			'classes'      => 'extra-classes',
-		],
-		'fields'  => [
-			[
-				'name'    => __( 'Example field', FJ_GENESISCMB2_TEXT_DOMAIN ),
-				'id'      => 'example_cmb2_field_22',
-				'type'    => 'text',
-				'default' => false,
 			],
 		],
 	],
