@@ -1,0 +1,20 @@
+{
+  "name": "ForwardJumpMarketingLLC/genesis-cmb2-meta-boxes",
+  "description": "WordPress plugin to add CMB2 meta boxes and custom fields to Genesis CPT archive and theme settings pages.",
+  "keywords": [
+    "wordpress"
+  ],
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Tim Jensen",
+      "homepage": "https://www.timjensen.us/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "webdevstudios/cmb2": "^2.2"
+  }
+}
