@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Admin Meta boxes Module
+ * Load plugin files.
  *
  * @package     ForwardJump\GenesisCMB2
  * @since       0.1.0

@@ -2,11 +2,12 @@
 /**
  * Genesis CMB2 Admin Meta Boxes
  *
- * @package     ForwardJump\GenesisCMB2
- * @author      Tim Jensen <tim@forwardjump.com>
- * @license     GNU General Public License 2.0+
- * @link        https://forwardjump.com
- * @since       0.1.0
+ * @package ForwardJump\GenesisCMB2
+ * @author  Justin Sternberg
+ * @author  Tim Jensen
+ * @license GNU General Public License 2.0+
+ * @link    https://forwardjump.com
+ * @since   0.1.0
  */
 
 namespace ForwardJump\GenesisCMB2;
