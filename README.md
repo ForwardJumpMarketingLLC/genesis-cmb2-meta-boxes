@@ -17,7 +17,7 @@ Meta boxes can be added to the Genesis Theme Settings page or to Genesis CPT Arc
 
 - Use the helper function `genesiscmb2_add_theme_settings_box()` To add meta boxes to Genesis Theme Settings.
 - Use the helper function `genesiscmb2_add_cpt_archive_box()` To add meta boxes to Genesis CPT Archive Settings. For example:
-```
+```php
 $cpt_config = [
 	[
 		'metabox' => [
