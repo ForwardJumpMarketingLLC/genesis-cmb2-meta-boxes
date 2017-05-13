@@ -15,8 +15,8 @@ Download the zip file and install it using the WordPress plugin installer.
 
 Meta boxes can be added to the Genesis Theme Settings page or to Genesis CPT Archive Settings pages.  Make sure your custom post types have support for `'genesis-cpt-archives-settings'`.
 
-- Use the helper function `genesiscmb2_add_theme_settings_box()` To add meta boxes to Genesis Theme Settings.
-- Use the helper function `genesiscmb2_add_cpt_archive_box()` To add meta boxes to Genesis CPT Archive Settings. For example:
+- Use the helper function `genesiscmb2_add_theme_settings_box()` to add meta boxes to Genesis Theme Settings.
+- Use the helper function `genesiscmb2_add_cpt_archive_box()` to add meta boxes to Genesis CPT Archive Settings. For example:
 ```php
 $cpt_config = [
 	[
