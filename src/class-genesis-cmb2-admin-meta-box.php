@@ -43,7 +43,7 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 	protected $use_cmb2_styles = true;
 
 	/**
-	 * Admin hooks
+	 * Admin hooks.
 	 *
 	 * @var array
 	 */
