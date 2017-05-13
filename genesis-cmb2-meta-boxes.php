@@ -36,5 +36,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'FJ_GENESISCMB2_TEXT_DOMAIN', 'genesis-cmb2-meta-boxes' );
 define( 'FJ_GENESISCMB2_DIR', __DIR__ );
 
-require_once FJ_GENESISCMB2_DIR . '/vendor/webdevstudios/cmb2/init.php';
+require_once FJ_GENESISCMB2_DIR . '/vendor/CMB2/init.php';
 require_once FJ_GENESISCMB2_DIR . '/src/init.php';
