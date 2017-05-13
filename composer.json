@@ -22,5 +22,14 @@
     "installer-paths": {
       "vendor/CMB2/": ["webdevstudios/cmb2"]
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "ForwardJump\\GenesisCMB2\\": "src/"
+    },
+    "files": [
+      "vendor/CMB2/init.php",
+      "src/helper-functions.php"
+    ]
   }
 }
