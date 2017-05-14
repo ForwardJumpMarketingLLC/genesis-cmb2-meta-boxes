@@ -30,6 +30,7 @@ $cpt_config = [
 				'id'      => 'example_cmb2_field',
 				'type'    => 'text',
 			],
+			// Add additional field array(s) here.
 		],
 	],
 	// Add additional meta box array(s) here.
@@ -37,7 +38,7 @@ $cpt_config = [
 
 genesiscmb2_add_cpt_archive_box( $cpt_config );
 ```
-
+- See example configuration arrays in the `config` directory. In general, use the same arguments for creating meta boxes and fields as you [normally would with CMB2](https://github.com/CMB2/CMB2/wiki/Basic-Usage#create-a-metabox). It is not necessary to include `'id'` or `'context'` in the `'metabox'` array.
 - Retrieve the custom field values using `genesis_get_option( $field_id )` and `genesis_get_cpt_option( $field_id )`.
 
 ## Limitations
