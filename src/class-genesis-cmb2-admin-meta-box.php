@@ -199,7 +199,7 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 	public function output_metabox( $param, $metabox_params ) {
 
 		$current_screen = get_current_screen();
-		$option_key     = empty( $current_screen->post_type ) ? 'genesis-settings' : "genesis-cpt-archive-settings-$current_screen->post_type";
+		$option_key     = empty( $current_screen->post_type ) ? 'genesis-settings' : "genesis-cpt-archive-settings-{$current_screen->post_type}";
 
 		$cmb = cmb2_get_metabox( $metabox_params['id'], $option_key, 'options-page' );
 		$cmb->show_form(
