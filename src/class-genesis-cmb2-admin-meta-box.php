@@ -100,7 +100,7 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 		}
 
 		$this->fields_config   = $config['fields'];
-		$this->use_cmb2_styles = isset( $config['metabox']['cmb2_styles'] ) ? $config['metabox']['cmb2_styles'] : true;
+		$this->use_cmb2_styles = isset( $config['metabox']['cmb_styles'] ) ? $config['metabox']['cmb_styles'] : true;
 	}
 
 	/**

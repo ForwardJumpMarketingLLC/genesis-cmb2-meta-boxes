@@ -27,7 +27,6 @@ return [
 			'object_types' => [ 'new-post-type', 'new-post-type-2' ], // Array. CPT slug(s).
 			'priority'     => 'high', // 'high' or 'low'.
 			'show_names'   => true,
-			'cmb2_styles'  => true,
 			'closed'       => false,
 			'classes'      => 'extra-classes',
 		],
