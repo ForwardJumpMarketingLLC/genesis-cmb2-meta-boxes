@@ -1,35 +1,37 @@
 {
-  "name": "ForwardJumpMarketingLLC/genesis-cmb2-meta-boxes",
-  "description": "WordPress plugin to add CMB2 meta boxes and custom fields to Genesis CPT archive and theme settings pages.",
-  "keywords": [
-    "wordpress"
-  ],
-  "type": "wordpress-plugin",
-  "license": "GPL-3.0+",
-  "authors": [
-    {
-      "name": "Tim Jensen",
-      "homepage": "https://www.timjensen.us/",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": ">=5.4",
-    "webdevstudios/cmb2": "^2.2",
-    "composer/installers": "~1.0"
-  },
-  "extra": {
-    "installer-paths": {
-      "vendor/CMB2/": ["webdevstudios/cmb2"]
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "ForwardJump\\GenesisCMB2\\": "src/"
+    "name": "ForwardJumpMarketingLLC/genesis-cmb2-meta-boxes",
+    "description": "WordPress plugin to add CMB2 meta boxes and custom fields to Genesis CPT archive and theme settings pages.",
+    "keywords": [
+        "wordpress"
+    ],
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Tim Jensen",
+            "homepage": "https://www.timjensen.us/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "webdevstudios/cmb2": "^2.2",
+        "composer/installers": "~1.0"
     },
-    "files": [
-      "vendor/CMB2/init.php",
-      "src/helper-functions.php"
-    ]
-  }
+    "extra": {
+        "installer-paths": {
+            "vendor/CMB2/": [
+                "webdevstudios/cmb2"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "ForwardJump\\GenesisCMB2\\": "src/"
+        },
+        "files": [
+            "vendor/CMB2/init.php",
+            "src/helper-functions.php"
+        ]
+    }
 }

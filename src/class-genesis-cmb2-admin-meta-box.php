@@ -90,9 +90,17 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 	 * @return void
 	 */
 	protected function set_properties( array $config ) {
-		$this->metabox_config  = $config['metabox'];
+		static $count = 0;
+		$count ++;
+
+		$this->metabox_config = $config['metabox'];
+
+		if ( empty( $this->metabox_config['id'] ) ) {
+			$this->metabox_config['id'] = "genesis-$this->admin_page-{$count}";
+		}
+
 		$this->fields_config   = $config['fields'];
-		$this->use_cmb2_styles = isset( $config['metabox']['cmb2_styles'] ) ? $config['metabox']['cmb2_styles'] : false;
+		$this->use_cmb2_styles = isset( $config['metabox']['cmb2_styles'] ) ? $config['metabox']['cmb2_styles'] : true;
 	}
 
 	/**
@@ -120,6 +128,7 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 
 			if ( $this->use_cmb2_styles ) {
 				add_action( "admin_print_styles-{$admin_hook}", [ 'CMB2_hookup', 'enqueue_cmb_css' ] );
+				add_action( "admin_print_styles-{$admin_hook}", [ $this, 'enqueue_styles' ] );
 			}
 
 			add_action( "{$admin_hook}_settings_page_boxes", [ $this, 'add_meta_box' ] );
@@ -138,12 +147,7 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 	 * @return \CMB2 instance.
 	 */
 	public function init_metabox() {
-
-		static $count = 0;
-		$count ++;
-
 		$overrides = [
-			'id'           => "genesis-$this->admin_page-{$count}",
 			'title'        => __( $this->metabox_config['title'], FJ_GENESISCMB2_TEXT_DOMAIN ),
 			'hookup'       => false, // Handled with $this->add_sanitized_values().
 			'cmb_styles'   => false, // Handled with $this->admin_hooks().
@@ -228,5 +232,16 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 		);
 
 		return $new_value;
+	}
+
+	/**
+	 * Additional styling for CMB2 fields, especially for group fields.
+	 *
+	 * @since 0.2.0
+	 *
+	 * @return void
+	 */
+	public function enqueue_styles() {
+		wp_enqueue_style( 'genesis-cmb2-admin-styles', FJ_GENESISCMB2_URL . '/assets/css/genesis-cmb2-admin-styles.css', [], '0.1.0' );
 	}
 }

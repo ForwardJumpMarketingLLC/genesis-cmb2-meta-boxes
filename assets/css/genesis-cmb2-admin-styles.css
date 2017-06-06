@@ -1,0 +1,16 @@
+.metabox-holder .postbox h3.cmb-group-title {
+    margin-left: -1em;
+    margin-right: -1em;
+    min-height: 1.5em;
+}
+
+.metabox-holder .postbox .repeatable .cmb-group-title {
+    padding-left: 2.2em;
+}
+
+.postbox .inside h2.cmb-group-name {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+}
