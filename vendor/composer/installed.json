@@ -1,17 +1,17 @@
 [
     {
         "name": "composer/installers",
-        "version": "v1.3.0",
-        "version_normalized": "1.3.0.0",
+        "version": "v1.4.0",
+        "version_normalized": "1.4.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/installers.git",
-            "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045"
+            "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/installers/zipball/79ad876c7498c0bbfe7eed065b8651c93bfd6045",
-            "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045",
+            "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+            "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
             "shasum": ""
         },
         "require": {
@@ -25,7 +25,7 @@
             "composer/composer": "1.0.*@dev",
             "phpunit/phpunit": "4.1.*"
         },
-        "time": "2017-04-24T06:37:16+00:00",
+        "time": "2017-08-09T07:53:48+00:00",
         "type": "composer-plugin",
         "extra": {
             "class": "Composer\\Installers\\Plugin",
@@ -59,6 +59,7 @@
             "Hurad",
             "ImageCMS",
             "Kanboard",
+            "Lan Management System",
             "MODX Evo",
             "Mautic",
             "Maya",
@@ -82,6 +83,7 @@
             "croogo",
             "dokuwiki",
             "drupal",
+            "eZ Platform",
             "elgg",
             "expressionengine",
             "fuelphp",
@@ -98,6 +100,7 @@
             "mediawiki",
             "modulework",
             "moodle",
+            "osclass",
             "phpbb",
             "piwik",
             "ppi",
@@ -117,17 +120,17 @@
     },
     {
         "name": "webdevstudios/cmb2",
-        "version": "v2.2.4",
-        "version_normalized": "2.2.4.0",
+        "version": "v2.2.5.3",
+        "version_normalized": "2.2.5.3",
         "source": {
             "type": "git",
             "url": "https://github.com/CMB2/CMB2.git",
-            "reference": "badecc7f908781ac14b879c74526f9d055f4a41e"
+            "reference": "5c9bdb6e99e17e4dad71ebbc68dab5def3c64e12"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/CMB2/CMB2/zipball/badecc7f908781ac14b879c74526f9d055f4a41e",
-            "reference": "badecc7f908781ac14b879c74526f9d055f4a41e",
+            "url": "https://api.github.com/repos/CMB2/CMB2/zipball/5c9bdb6e99e17e4dad71ebbc68dab5def3c64e12",
+            "reference": "5c9bdb6e99e17e4dad71ebbc68dab5def3c64e12",
             "shasum": ""
         },
         "require": {
@@ -139,7 +142,7 @@
         "suggest": {
             "composer/installers": "~1.0"
         },
-        "time": "2017-02-27T15:05:31+00:00",
+        "time": "2017-08-22T18:14:34+00:00",
         "type": "wordpress-plugin",
         "installation-source": "dist",
         "notification-url": "https://packagist.org/downloads/",
@@ -152,10 +155,22 @@
                 "email": "contact@webdevstudios.com",
                 "homepage": "https://github.com/WebDevStudios",
                 "role": "Developer"
+            },
+            {
+                "name": "Justin Sternberg",
+                "email": "justin@dsgnwrks.pro",
+                "homepage": "https://dsgnwrks.pro",
+                "role": "Developer"
+            },
+            {
+                "name": "Zao",
+                "email": "office@zao.com",
+                "homepage": "http://zao.is",
+                "role": "Developer"
             }
         ],
         "description": "CMB2 is a metabox, custom fields, and forms library for WordPress that will blow your mind.",
-        "homepage": "https://github.com/WebDevStudios/CMB2",
+        "homepage": "https://github.com/CMB2/CMB2",
         "keywords": [
             "metabox",
             "plugin",

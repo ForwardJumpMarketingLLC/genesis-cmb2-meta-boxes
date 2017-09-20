@@ -4,7 +4,7 @@
  * Plugin URI: https://bitbucket.org/forwardjump/forwardjump-utility-core
  * Description: Add CMB2 meta boxes and custom fields to Genesis CPT archive and theme settings pages.
  *
- * Version: 0.2.0
+ * Version: 0.2.1
  *
  * Author: Tim Jensen
  * Author URI: https://forwardjump.com/
