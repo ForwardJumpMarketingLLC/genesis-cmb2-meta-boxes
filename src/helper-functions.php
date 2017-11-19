@@ -55,7 +55,7 @@ function genesiscmb2_add_admin_meta_box( $class, $config, $caller ) {
 	}
 
 	if ( ! array_key_exists( 0, $config ) ) {
-		_doing_it_wrong( $caller, __( 'The Genesis CMB2 configuration is not formatted correctly.', FJ_GENESISCMB2_TEXT_DOMAIN ), '0.1.0' );
+		_doing_it_wrong( $caller, __( 'The Genesis CMB2 configuration is not formatted correctly.', 'genesis-cmb2-meta-boxes' ), '0.1.0' );
 
 		$config = [ $config ];
 	}

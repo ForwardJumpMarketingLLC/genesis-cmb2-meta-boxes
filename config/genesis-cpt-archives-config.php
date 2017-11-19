@@ -32,26 +32,26 @@ return [
 		],
 		'fields'  => [
 			[
-				'name'    => 'Example field',
-				'id'      => 'example_cmb2_field',
-				'type'    => 'text',
+				'name' => 'Example field',
+				'id'   => 'example_cmb2_field',
+				'type' => 'text',
 			],
 			[
-				'name'    => 'Example Group',
-				'id'      => 'example_group',
-				'type'    => 'group',
+				'name'       => 'Example Group',
+				'id'         => 'example_group',
+				'type'       => 'group',
 				'repeatable' => true,
-				'options'     => [
-					'group_title'   => __( 'Entry {#}', FJ_GENESISCMB2_TEXT_DOMAIN ),
-					'add_button'    => __( 'Add Another Entry', FJ_GENESISCMB2_TEXT_DOMAIN ),
-					'remove_button' => __( 'Remove Entry', FJ_GENESISCMB2_TEXT_DOMAIN ),
+				'options'    => [
+					'group_title'   => __( 'Entry {#}', 'genesis-cmb2-meta-boxes' ),
+					'add_button'    => __( 'Add Another Entry', 'genesis-cmb2-meta-boxes' ),
+					'remove_button' => __( 'Remove Entry', 'genesis-cmb2-meta-boxes' ),
 					'sortable'      => true,
 				],
-				'fields'  => [
+				'fields'     => [
 					[
-						'name'    => 'Example group field',
-						'id'      => 'example_group_field',
-						'type'    => 'text',
+						'name'       => 'Example group field',
+						'id'         => 'example_group_field',
+						'type'       => 'text',
 						'repeatable' => true,
 					],
 				],

@@ -148,7 +148,7 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 	 */
 	public function init_metabox() {
 		$overrides = [
-			'title'        => __( $this->metabox_config['title'], FJ_GENESISCMB2_TEXT_DOMAIN ),
+			'title'        => __( $this->metabox_config['title'], 'genesis-cmb2-meta-boxes' ),
 			'hookup'       => false, // Handled with $this->add_sanitized_values().
 			'cmb_styles'   => false, // Handled with $this->admin_hooks().
 			'context'      => 'main', // Important for Genesis.
@@ -164,7 +164,7 @@ abstract class Genesis_CMB2_Admin_Meta_Box {
 		);
 
 		foreach ( (array) $this->fields_config as $field_config ) {
-			$field_config['name'] = __( $field_config['name'], FJ_GENESISCMB2_TEXT_DOMAIN );
+			$field_config['name'] = __( $field_config['name'], 'genesis-cmb2-meta-boxes' );
 
 			// Set our CMB2 fields.
 			$this->cmb2_instance->add_field( $field_config );

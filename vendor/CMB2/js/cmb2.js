@@ -401,7 +401,8 @@ window.CMB2 = window.CMB2 || {};
 		var $elements = $row.find( cmb.repeatUpdate );
 		if ( group ) {
 
-			var $other  = $row.find( '[id]' ).not( cmb.repeatUpdate );
+			var $other = $row.find( '[id]' ).not( cmb.repeatUpdate );
+			var $empty = $row.find('.empty-row').find( cmb.repeatUpdate );
 
 			// Remove extra ajaxed rows
 			$row.find('.cmb-repeat-table .cmb-repeat-row:not(:first-child)').remove();
@@ -421,6 +422,21 @@ window.CMB2 = window.CMB2 || {};
 					}
 				});
 			}
+
+			// Fix hidden empty rows
+			if ( $empty.length ) {
+				$empty.each(function() {
+					var $emptyField = $( this );
+					var oldIndex    = $emptyField.attr('id').split('_').pop();
+					var NameRegex   = new RegExp( '\\['+oldIndex+'\\]$' );
+					var IdRegex     = new RegExp( '_'+oldIndex+'$' );
+					var newName     = $emptyField.attr('name').replace( NameRegex, '[' + (prevNum + 1) + ']' );
+					var newId       = $emptyField.attr('id').replace( IdRegex, '_' + ( prevNum + 1 ) );
+
+					$emptyField.attr('name', newName);
+					$emptyField.attr('id', newId);
+				});
+			}
 		}
 
 		$elements.filter( ':checked' ).removeAttr( 'checked' );
@@ -433,13 +449,13 @@ window.CMB2 = window.CMB2 || {};
 		}
 
 		$elements.each( function() {
-			cmb.elReplacements( $( this ), prevNum );
+			cmb.elReplacements( $( this ), prevNum, group );
 		} );
 
 		return cmb;
 	};
 
-	cmb.elReplacements = function( $newInput, prevNum ) {
+	cmb.elReplacements = function( $newInput, prevNum, group ) {
 		var oldFor    = $newInput.attr( 'for' );
 		var oldVal    = $newInput.val();
 		var type      = $newInput.prop( 'type' );
@@ -451,11 +467,24 @@ window.CMB2 = window.CMB2 || {};
 			attrs = { 'for' : oldFor.replace( '_'+ prevNum, '_'+ cmb.idNumber ) };
 		} else {
 			var oldName = $newInput.attr( 'name' );
-			// Replace 'name' attribute key
-			var newName = oldName ? oldName.replace( '['+ prevNum +']', '['+ cmb.idNumber +']' ) : '';
+			var newName;
 			oldID       = $newInput.attr( 'id' );
-			newID       = oldID ? oldID.replace( '_'+ prevNum, '_'+ cmb.idNumber ) : '';
-			attrs       = {
+			// Handle adding groups vs rows.
+			if ( group ) {
+				// Expect another bracket after group's index closing bracket.
+				newName = oldName ? oldName.replace( '['+ prevNum +'][', '['+ cmb.idNumber +'][' ) : '';
+				// Expect another underscore after group's index trailing underscore.
+				newID   = oldID ? oldID.replace( '_' + prevNum + '_', '_' + cmb.idNumber + '_' ) : '';
+			}
+			else {
+				// Row indexes are at the very end of the string.
+				var lastNameIndex = new RegExp( '\\[' + prevNum + '\\]$' );
+				var lastIdIndex   = new RegExp( '_' + prevNum + '$' );
+				newName = oldName ? oldName.replace( lastNameIndex, '[' + cmb.idNumber + ']' ) : '';
+				newID   = oldID ? oldID.replace( lastIdIndex, '_' + cmb.idNumber ) : '';
+			}
+
+			attrs = {
 				id: newID,
 				name: newName,
 				'data-iterator': cmb.idNumber,
@@ -791,7 +820,11 @@ window.CMB2 = window.CMB2 || {};
 
 		options.onClose = function( dateText, inst ) {
 			// Remove the class when we're done with it (and hide to remove FOUC).
-			$id( 'ui-datepicker-div' ).removeClass( 'cmb2-element' ).hide();
+			var $picker = $id( 'ui-datepicker-div' ).removeClass( 'cmb2-element' ).hide();
+			if ( 'timepicker' === method && ! $( inst.input ).val() ) {
+				// Set the timepicker field value if it's empty.
+				inst.input.val( $picker.find( '.ui_tpicker_time' ).text() );
+			}
 
 			// Let's be sure to call onClose if it was added
 			if ( 'function' === typeof existing.onClose ) {
